@@ -66,11 +66,11 @@ body {
 }
 
 .container h1 {
+	color: #60A220;
 	font-weight: 100;
 	font-size: 3.2em;
 	margin: .4em 0 .4em .1em;
 	padding-left: 0;
-	color: #60A220;
 }
 
 .container p {
@@ -82,7 +82,6 @@ body {
 .container a {
 	text-decoration: none;
 	color: #9ADC37;
-
 }
 
 .footer {
@@ -91,4 +90,11 @@ body {
 	margin-left: .5em;
 	color: #FFF;
 	font-size: 1.7em;
+}
+
+.product-select {
+	font-size: 1.2em;
+	font-weight: 900;	
+	padding-bottom: .6em;
+	padding-left: .5em;
 }

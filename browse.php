@@ -1,3 +1,14 @@
+<?php 
+	//holds array of products, $option will be used to build menu options
+	include('products.php'); 
+	$options = '';
+
+	//loop to build product dropdown for page
+	foreach($products as $key=>$product) {
+		$options = $options . "<option value='$key'>$product</option>";
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +26,13 @@
 	
 	<div class="container">
 		<h1>Browse Products</h1>
-		<ul class="browse-items">
-			<li class="browse-items"><a href="product.php?id=1">Macbook</a></li>
-			<li class="browse-items"><a href="product.php?id=2">Ubuntu</a></li>
-			<li class="browse-items"><a href="product.php?id=3">Windows</a></li>
-		</ul>
+		<form class="product-select" action="view.php">Product:
+    		<select name="pid">
+				<?php echo $options; ?>
+    		</select>
+    		Quantity: <input type="number" min="1" name="quantity">
+    		<input class="myButton" type="submit" value="Submit">
+		</form>
 	</div>
 
 	<?php require('footer.php'); ?>
