@@ -1,13 +1,4 @@
-<?php 
-	//holds array of products, $option will be used to build menu options
-	include('products.php'); 
-	$options = '';
-
-	//loop to build product dropdown for page
-	foreach($products as $key=>$product) {
-		$options = $options . "<option value='$key'>$product</option>";
-	}
-?>
+<?php include('products.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +6,9 @@
 	<meta charset="UTF-8">
 	<title>Browse Products</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
-	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
 </head>
 </head>
 <body>
