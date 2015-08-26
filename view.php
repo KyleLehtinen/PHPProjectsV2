@@ -1,13 +1,14 @@
 <?php 
 	include('products.php');
-	
-	if ((isset($_GET['pid']) && isset($_GET['quantity'])) 
-		&& array_key_exists($_GET['pid'], $products)) {
+
+	if ((isset($_GET['pid']) && isset($_GET['quantity'])) && array_key_exists($_GET['pid'], $products)) {
 		
 		$pid = $_GET['pid'];
 		$quantity = $_GET['quantity'];
 
-		if ($products[$pid] == 'Mac' && $quantity > 7) {
+		if ($quantity == null) {
+			$output = "You need to have a quantity of at least 1.";
+		} else if ($products[$pid] == 'Mac' && $quantity > 7) {
 			$output = "You can't order over 7 Macs.";
 		} else {
 			$output = "Your order includes $quantity $products[$pid] computers";
