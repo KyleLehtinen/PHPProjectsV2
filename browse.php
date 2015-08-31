@@ -1,4 +1,14 @@
-<?php include('products.php'); ?>
+<?php 
+	include('products.php'); 
+
+	$options = '';
+
+	//loop to build product dropdown for page
+	foreach($products as $key=>$product) {
+		$options .= "<option value='$key'>$product</option>";
+	}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

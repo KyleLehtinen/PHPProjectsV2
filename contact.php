@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
 </head>
-</head>
+
 <body>
 
 	<?php require('header.php'); ?>
@@ -19,7 +19,8 @@
 		<p>3134 Someplace St.</p>
 		<p>Mesa, AZ 85213</p>
 	</div>
-	<?php require('footer.php');?>
+
+	<?php require('footer.php'); ?>
 	
 </body>
 </html>

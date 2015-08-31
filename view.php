@@ -6,7 +6,7 @@
 		$pid = $_GET['pid'];
 		$quantity = $_GET['quantity'];
 
-		if ($quantity == null || $quantity < 1 || !(is_numeric($quantity))) {
+		if ($quantity == null || !(is_numeric($quantity)) || $quantity < 1 ) {
 			$output = "You need to have a quantity of at least 1.";
 		} else if ($products[$pid] == 'Mac' && $quantity > 7) {
 			$output = "You can't order over 7 Macs.";
@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Lato:100,300,400' />
 </head>
 <body>
 
